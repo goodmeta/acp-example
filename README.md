@@ -35,4 +35,4 @@ See [OBSERVATIONS.md](./OBSERVATIONS.md) for the full findings. The most importa
 
 ACP is a REST protocol (no MCP binding). Agents call merchant endpoints directly via HTTP with `API-Version` and `Idempotency-Key` headers.
 
-Compare with [ucp-example](../ucp-example/) for the MCP-native transport version.
+Compare with [ucp-example](https://github.com/goodmeta/ucp-example) for the MCP-native transport version.
