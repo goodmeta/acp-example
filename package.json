@@ -1,0 +1,20 @@
+{
+  "name": "@goodmeta/acp-example",
+  "version": "1.0.0",
+  "description": "Minimal ACP (Agentic Commerce Protocol) merchant + agent implementation",
+  "type": "module",
+  "scripts": {
+    "server": "tsx src/server.ts",
+    "client": "tsx src/client.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.17",
+    "tsx": "4.19.0",
+    "typescript": "6.0.3"
+  },
+  "dependencies": {
+    "@hono/node-server": "1.13.7",
+    "hono": "4.12.9"
+  }
+}
