@@ -4,6 +4,25 @@ Minimal implementation of the [Agentic Commerce Protocol (ACP)](https://github.c
 
 Built to understand ACP from the inside. Implements both sides: a merchant server and an agent client.
 
+> **Spec currency.** This tracks **2026-01-30**. Upstream has since published
+> **2026-04-17**, and this example has not been updated to it. What that version
+> adds and this does not implement:
+>
+> - **3-D Secure results** — an `authentication_result` carrying `outcome` plus
+>   `three_ds_cryptogram`, `electronic_commerce_indicator`, `transaction_id` and
+>   `version`. Note the client here already advertises
+>   `capabilities.interventions.supported: ["3ds"]`, so against 2026-04-17 it
+>   claims a capability whose result shape the server does not produce.
+> - **Out-of-stock sessions** — a checkout session state for unavailable items.
+> - `display_name` on payment handlers.
+>
+> 2026-04-17 also **drops** `authentication_metadata.channel.browser.*` (the
+> browser-fingerprinting block). This example never implemented it, so nothing
+> here is stale in that direction.
+>
+> Everything below is accurate for 2026-01-30. Treat it as a reading of that
+> version, not as a current-spec reference.
+
 ## What's here
 
 - `src/server.ts` — ACP merchant (TicketShop), selling TOKEN2049 VIP passes
