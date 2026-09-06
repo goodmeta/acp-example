@@ -1,6 +1,7 @@
 {
   "name": "@goodmeta/acp-example",
   "version": "1.0.0",
+  "license": "Apache-2.0",
   "description": "Minimal ACP (Agentic Commerce Protocol) merchant + agent implementation",
   "type": "module",
   "scripts": {
